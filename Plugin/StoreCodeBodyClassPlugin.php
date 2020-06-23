@@ -32,5 +32,6 @@ class StoreCodeBodyClassPlugin implements ObserverInterface
         $websiteCode = $store->getWebsite()->getCode();
         $this->config->addBodyClass($storeCode);
         $this->config->addBodyClass($websiteCode);
+        $this->config->setElementAttribute(Config::ELEMENT_TYPE_BODY,'data-brand',$websiteCode);
     }
 }
